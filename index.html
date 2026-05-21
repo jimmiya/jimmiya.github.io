@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jaime's Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="container px-5 pb-4 pt-4 mt-5 text-bg-primary">
+            <h1 class="display-1">Jaime Gine Paraiso's Portfolio
+            </h1>
+        </div>
+
+        <!-- Cards for each project -->
+        <div class="container bg-primary-subtle">
+            <h3 class="text-center display-5 pt-4 pb-2">About</h3>
+            <!-- This means of screen sizes small and smaller, it will be 1 column -->
+            <!-- Medium will have two and large and above will have two too -->
+            <div class="row row-cols-md-2 row-cols-sm-1 row-cols-1 row-gap-5 mx-1 mx-lg-5 mb-4 justify-content-evenly">
+                <div class="col">
+                    <div class="card p-3 rounded-2">
+                        <div class="card-body">
+                            <p class="card-text">
+                                Computer Engineer and Master's student studying MSc High Performance Graphics and Games Engineering, predicted to graduate with First Class Honours in 2026.
+                                <br>
+                                Experienced in collaboration and project management through academic group projects and
+                                work experience. 
+                                <br>
+                                Interested in real-time rendering, game engines and game programming.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card p-3 rounded-2">
+                        <div class="card-body">
+                            <h5 class="card-title">Contact and Links</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">E-mail: <a href="mailto: jgineparaiso@gmail.com">jgineparaiso@gmail.com</a></li>
+                            <li class="list-group-item">GitHub: <a href="https://github.com/jimmiya">@jimmiya</a></li>
+                            <li class="list-group-item">LinkedIn: <a href="https://www.linkedin.com/in/jaime-gine/">linkedin.com/in/jaime-gine</a></li>
+                            <li class="list-group-item">CV: <a href="CV.pdf" target="_blank">Download PDF here</a></li>                        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="text-center display-5 pb-3">Projects</h3>
+            <div
+                class="row row-cols-md-2 row-cols-sm-1 row-cols-1 row-gap-5 mx-1 mx-lg-5 pb-1 pb-lg-5 justify-content-evenly">
+                <div class="col">
+                    <div class="card p-3 rounded-2">
+                        <video src="VkRenderer.mp4" class="card-img-top" controls autoplay loop muted></video>
+                        <div class="card-body">
+                            <h5 class="card-title">Vulkan Renderer</h5>
+                            <p class="card-text">
+                            <p>I coded a renderer with C++ using the Vulkan API (with Vulkan 1.3 features: dynamic rendering!) as part of coursework at University.
+                            </p>
+                            <p>
+                                The renderer uses PBR shading, alpha masking (for the trees and bushes), as well as multiple debug visualisations such as mipmap levels, depth and partial derivatives.
+                                It also has a pixelated / "mosaic" post-processing effect.
+                            </p>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Source code available on request</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card p-3 rounded-2">
+                        <div id="carouselPhysics" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <video src="Physics_move_demo.mp4" class="card-img-top" controls autoplay loop muted></video>
+                                </div>
+                                <div class="carousel-item">
+                                    <video src="Physics_ballpit.mp4" class="card-img-top" controls autoplay loop muted></video>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselPhysics"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselPhysics"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        
+                        <div class="card-body">
+                            <h5 class="card-title">Physics Engine for the KillSwitch game engine</h5>
+                            <p class="card-text">
+                            <p>In the development of our custom <a href="https://github.com/LiamSwarbrick/KillSwitch-Vulkan-Engine" target="_blank">KillSwitch</a> game engine as part of coursework at University, I developed a full physics engine from scratch.
+                            </p>
+                            <p>
+                                It allows for multiple types of rigid bodies and collider shapes. It contains a coarse AABB check and a narrower check with full implementations of the GJK+EPA algorithms for collision detection and contact generation. 
+                            </p>
+                            <div class="collapse" id="collapseExamplePhysics">
+                                Also an interpenetration and impulse-resolution (with friction) solver, queries, events, and more.
+                                <br>
+                                Extra logic was added for characters to be able to go up and down slopes and stairs, as well as to climb obstacles.
+                                <br>
+                                <br>
+                                For more detailed information refer to the source code or request the double page academic report, which explains all implementation details. 
+                            </div>
+                            <a class="btn btn-warning" data-bs-toggle="collapse" href="#collapseExamplePhysics" role="button"
+                                aria-expanded="false" aria-controls="collapseExample">
+                                Read More
+                            </a>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">You can find the game engine's source code <a href="https://github.com/LiamSwarbrick/KillSwitch-Vulkan-Engine" target="_blank">here</a> (in src/physics/)</li>
+                            <li class="list-group-item">Double-page academic report available on request</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card p-3 rounded-2">
+                        <div id="carouselRT" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="./RT_main.png" class="d-block w-100" alt="anaglyph image">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./RT_samples_cropped.gif" class="d-block w-100" alt="anaglyph image">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./RT_dir_ind.png" class="d-block w-100" alt="anaglyph image">
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="./RT_suz_cropped.png" class="d-block w-100" alt="anaglyph image">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselRT"
+                                data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselRT"
+                                data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Path tracing Renderer</h5>
+                            <p class="card-text">
+                            <p>A full-featured CPU Monte-carlo path tracer as part of coursework at univeristy</p>
+                            <p>The renderer was coded in C++ and has a rasterized side-by-side comparison scene using OpenGL.</p>
+                            <p>The raytracer uses physically correct phong shading, and has the following features:</p>
+                            <div class="collapse" id="collapseExampleRT">
+                                <ul>
+                                    <li>Point and area lights with hard and soft shadows</li>
+                                    <li>Reflection, refraction (with beer's law) and the fresnel effect</li>
+                                    <li>Monte-carlo sampling</li>
+                                    <li>Next Event Estimation for indirect lighting</li>
+                                    <li>Anti-aliasing</li>
+                                    <li>Caustics</li>
+                                </ul>
+                            </div>
+                            <a class="btn btn-warning" data-bs-toggle="collapse" href="#collapseExampleRT" role="button"
+                                aria-expanded="false" aria-controls="collapseExample">
+                                Read More
+                            </a>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Source code available on request</li>
+                        </ul>
+                    </div>
+                </div>           
+
+                <div class="col">
+                    <div class="card p-3 rounded-2">
+                        <video src="hamishslow.mp4" class="card-img-top" controls autoplay loop muted></video>
+                        </video>
+                        <div class="card-body">
+                            <h5 class="card-title">Mesh Processing Toolkit</h5>
+                            <p class="card-text">
+                            I implemented a mesh processing toolkit in C++ as part of coursework at University.
+                            <br>
+                            <br>
+                            Detailed set of features:
+                            </p>
+                            <div class="collapse" id="collapseExampleMeshProcessing">
+                                <ul>
+                                    <li>Conversion from triangle soup to indexed face</li>
+                                    <li>Conversion from indexed face to directed edge</li>
+                                    <li>Manifold testing for meshes</li>
+                                    <li>Topological analysis using Euler's formula</li>
+                                    <li>Simple Mesh repair</li>
+                                    <li>Mesh simplification using curvature analysis</li>
+                                </ul>
+                            </div>
+                            <a class="btn btn-warning" data-bs-toggle="collapse" href="#collapseExampleMeshProcessing"
+                                    role="button" aria-expanded="false" aria-controls="collapseMeshProcessing">
+                                    Read More
+                                </a>
+                        </div>
+                        
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Source code available on request</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card p-3 rounded-2">
+                        <video src="dodecahedra.mp4" class="card-img-top" controls autoplay loop muted></video>
+                        <div class="card-body">
+                                <h5 class="card-title">Animation and Physics Simulation</h5>
+                            <p class="card-text">
+                            <p>Using an OpenGL renderer provided for the coursework, I added skeletal animation with animation blending, and a basic mesh-agnostic rigid-body physics engine, as part of coursework at univeristy.</p>
+                            <div class="collapse" id="collapseExampleDodecahedra">
+                                <p>
+                                    Skeletal data and animation was processed using BHV format. I optionally added animation blending and position interpolation to make it cleaner.
+                                </p>
+                                <p>
+                                    Physical simulation features sphere and dodecahedra (processed using vertices, so basically shape-agnostic) colliding against terrain. Also added sphere to sphere collisions.
+                                </p>
+                            </div>
+                            <a class="btn btn-warning" data-bs-toggle="collapse" href="#collapseExampleDodecahedra"
+                                role="button" aria-expanded="false" aria-controls="collapseDodecahedra">
+                                Read More
+                            </a>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Source code available on request</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card p-3 rounded-2">
+                        <video src="hellmist_preview_lq.mp4" class="card-img-top" controls autoplay loop muted></video>
+                        <div class="card-body">
+                            <h5 class="card-title">HellMist, a game made in 2 days using our custom game engine</h5>
+                            <p class="card-text">
+                            <p>As part of the Group Project coursework, where we made a custom engine from scratch, we also made a game to show and submit to the Game Republic Student Showcase!</p>
+                            <p>
+                                The game features a wave based procedurally generated level with increasing enemies and selectable player upgrades. Melee and ranged combat.
+                                <br> 
+                            </p>
+
+                            <p>My game programming contributions:</p>
+                            <div class="collapse" id="collapseHellmist">
+                                <ul>
+                                    <li>Architected the gameplay systems to communicate using ECS components</li>
+                                    <li>Basic EnemyAI using raycasting visibility</li>
+                                    <li>Movement System using forward shapecasting</li>
+                                    <li>Melee (including combos) using shape-intersection and Ranged Combat using raycasting</li>
+                                </ul>
+                            </div>
+                            <a class="btn btn-warning" data-bs-toggle="collapse" href="#collapseHellmist"
+                                role="button" aria-expanded="false" aria-controls="collapseDodecahedra">
+                                Read More
+                            </a>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">You can find the game source code <a href="https://github.com/LiamSwarbrick/KillSwitch-Vulkan-Engine/tree/main/src/game" target="_blank">here</a> (in src/game/)</li> 
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+
+
+
+
+
